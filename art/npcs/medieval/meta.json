@@ -1,0 +1,26 @@
+{
+  "reserve": true,
+  "about": "Medieval cast, ready but not placed in the world yet. 'reserve' keeps tests/worldgen_test.js from requiring them. Names are their in-game display names (PA.personName(key)).",
+  "names": {
+    "king": "KING ALDRIC",
+    "queen": "QUEEN ELEANOR",
+    "princess": "PRINCESS ROSAMUND",
+    "prince": "PRINCE EDMUND",
+    "knight_errant": "SIR GARETH",
+    "page": "PIP THE PAGE",
+    "archer": "ROBIN FLETCHER",
+    "monk": "BROTHER ANSELM",
+    "nun": "SISTER BEATRICE",
+    "blacksmith": "WAT THE SMITH",
+    "peasant": "PIERS PLOWMAN",
+    "villager": "GOODWIFE AGNES",
+    "jester": "PATCH THE FOOL",
+    "bard": "TALIESIN",
+    "alchemist": "MASTER ROGER",
+    "herbalist": "BRYONY",
+    "merchant": "MASTER CUTHBERT",
+    "guard": "OSRIC OF THE WATCH",
+    "alewife": "MISTRESS JOAN",
+    "falconer": "WALTER FALCONER"
+  }
+}

@@ -1,0 +1,294 @@
+Creature Roster: 40 Divas & Shy Ones
+Oct 6, 2026 · The Buffalo, New York Procedural Amusements Coding Society
+Types
+There are 12 types, arranged in four rings of three. Inside a ring, each type beats the next one and loses to the one before it, like rock-paper-scissors. Against types outside its ring, a type is neutral.
+Ring
+Type
+Beats
+Loses to
+Why
+Hearth
+Kindle
+Bloom
+Tide
+Fire burns the garden; water puts it out
+Hearth
+Bloom
+Tide
+Kindle
+Plants drink the water
+Hearth
+Tide
+Kindle
+Bloom
+Water douses flame
+Forge
+Current
+Chrome
+Stone
+Charge shorts out metal; stone grounds it
+Forge
+Chrome
+Stone
+Current
+Steel cuts through rock
+Forge
+Stone
+Current
+Chrome
+Rock insulates against charge
+Weather
+Frost
+Breeze
+Loam
+Cold stills the air; soil buries the cold
+Weather
+Breeze
+Loam
+Frost
+Wind erodes the soil
+Weather
+Loam
+Frost
+Breeze
+Earth insulates against the freeze
+Stage
+Glam
+Blight
+Hush
+Sparkle scrubs away grime; mystery steals the scene
+Stage
+Blight
+Hush
+Glam
+Fumes seep into every hiding spot
+Stage
+Hush
+Glam
+Blight
+The quiet one upstages the show-off
+Temperaments
+Every creature is either a Diva or Shy, 20 of each. Temperament is a personality, separate from type. It could also drive a small battle rule:
+Diva: hits harder on the turn after landing a hit, because it's feeling itself. Loses some accuracy after taking a big hit, because it's sulking.
+Shy: dodges more easily on its first turn out, since it's still hiding. Hits softer while the opponent is at full health, because it hasn't worked up the nerve yet.
+Each creature has three attacks. The third, marked (signature), is its own and says something about its personality. Creatures with finished sprites are marked sprites done.
+Kindle
+Creature
+Temperament
+Attacks
+Flavour
+Emberwren (wren)
+Diva
+Tail Torch, Hot Gossip, Curtain of Sparks (signature): a wall of embers that raises its attack if it lands
+Fluffs its burning tail before every battle and won't fight until someone says it looks lovely.
+Pyracal (caracal)
+Diva
+Tuft Flare, Haughty Swipe, Smoulder Stare (signature): a glare so hot it lowers the target's defense
+Its ear tufts burn hotter the more it's ignored. Wild Pyracal have scorched their own reflections out of jealousy.
+Fossire (fossa)
+Shy
+Coal Pounce, Treeline Hide, Ash Veil (signature): vanishes into its own smoke and strikes from cover next turn
+Lights tiny campfires high in the canopy, then is too nervous to sit beside them.
+Frost
+Creature
+Temperament
+Attacks
+Flavour
+Gullet (gull) sprites done
+Diva
+Cold Shoulder, Brain Freeze, Big Thumbs Up (signature): raises its own speed and makes the target hesitate
+Combs its ice pompadour with a fish bone between rounds. Insists it was born cool, which is technically true.
+Hoarfowl (snowy owl) sprites done
+Shy
+Snowblind Flap, Muffled Hoot, Feather Drift (signature): hides in a flurry, raising its evasion
+So quiet it startles itself. Melts into a snowbank whenever more than two people look its way.
+Blizzpard (snow leopard)
+Diva
+Whiteout Pounce, Icicle Manicure, Glacier Glare (signature): freezes the target in place for a turn
+Won't step outside without a fresh snowfall. Each spot on its coat is said to be a frozen compliment.
+Tardigel (tardigrade)
+Shy
+Crystal Curl, Eight-Leg Shuffle, Deep Freeze Nap (signature): goes dormant for two turns and heals while it sleeps
+Can survive almost anything except eye contact. Curls into a crystal ball when complimented and stays that way for days.
+Tide
+Creature
+Temperament
+Attacks
+Flavour
+Riptabby (fishing cat) sprites done
+Diva
+Paw Plunge, Catch of the Day, Wet Look (signature): soaks itself to raise its attack and calls it a fashion choice
+Fishes with one paw and poses with every catch. Refuses to battle on days its fur is frizzy.
+Glumph (blobfish) sprites done
+Shy
+Deep Sigh, Pressure Pout, Sink Away (signature): dives out of reach, dodging the next attack
+Looks perfectly fine at the bottom of the sea. Knows exactly what it looks like on land and would rather not discuss it.
+Puffluke (puffin)
+Diva
+Bill Boast, Wave Wink, Rainbow Beak (signature): flashes its striped bill, lowering the target's accuracy
+Repaints its beak every spring and won't leave the burrow until the stripes are perfect.
+Dumbopus (dumbo octopus)
+Diva
+Ear Flutter, Ink Kiss, Runway Glide (signature): strikes first and raises its evasion
+Glides through the deep like it's on a catwalk. Waves its ear-fins at anything that might be an audience, including rocks.
+Bloom
+Creature
+Temperament
+Attacks
+Flavour
+Mossapo (kakapo)
+Shy
+Midnight Waddle, Spore Mumble, Moss Cloak (signature): freezes in place and blends into the foliage, raising its defense and evasion
+Too round to fly and too shy to walk in daylight. Holds perfectly still when spotted and hopes the moss does the rest.
+Margleaf (margay)
+Diva
+Leaf Pirouette, Canopy Leap, Verdant Vogue (signature): strikes a pose that raises its speed and attack
+Leaps between branches purely to be seen leaping. Grows a fresh leaf crown before every important battle.
+Okapine (okapi)
+Shy
+Tongue Lash, Fern Veil, Striped Retreat (signature): slips into the undergrowth and swaps out safely
+Its stripes help it vanish into the ferns, which it does constantly. Nobody has ever taken a clear photo of one.
+Loam
+Creature
+Temperament
+Attacks
+Flavour
+Dustdash (roadrunner)
+Diva
+Dust Trail, Grit Kick, Show-Off Sprint (signature): laps the field, raising its speed sharply
+Runs circles around opponents for no tactical reason, then stops mid-battle to admire its own dust cloud.
+Dunekit (sand cat)
+Shy
+Dune Pounce, Sand Burrow, Footprint Fib (signature): leaves false tracks, so the target's next attack misses
+Never leaves real footprints, partly by instinct and partly so nobody can follow it home.
+Tentamole (star-nosed mole)
+Shy
+Root Wiggle, Star Sniff, Tunnel Escape (signature): digs underground and resurfaces with a hit next turn
+Finds its way entirely by touch and blushes from the nose outward. Digs a new tunnel every time someone says hello.
+Stone
+Creature
+Temperament
+Attacks
+Flavour
+Cassorock (cassowary)
+Diva
+Talon Stomp, Royal Scowl, Crown Charge (signature): rams with its stone crest, stronger if it moves first
+Believes its stone crest is a crown, and so does everyone who's ever been kicked by it.
+Manulith (Pallas's cat)
+Diva
+Grumble Slam, Pebble Hiss, Boulder Sulk (signature): refuses to budge, sharply raising its defense
+Permanently unimpressed. Its sulks are so heavy they leave dents in the ground.
+Molebrick (naked mole rat)
+Shy
+Pebble Toss, Brick Burrow, Wrinkle Wall (signature): hides behind a heap of stones, blocking one attack
+Covers its wrinkles with a pile of rocks it calls an outfit. Rearranges them for hours before letting anyone visit.
+Thornmoloch (thorny devil)
+Shy
+Dew Sip, Spine Bristle, Thornball Roll (signature): curls up and rolls, hurting anything that touches it
+Grew all those spikes purely so nobody gets close enough to make small talk.
+Current
+Creature
+Temperament
+Attacks
+Flavour
+Servolt (serval) sprites done
+Diva
+Ear Bolt, Sky Pounce, Volume Up (signature): turns its buzzing ears to full, raising its attack
+Its huge ears catch every whisper about it. It answers praise with sparks and criticism with bigger sparks.
+Shoebolt (shoebill)
+Shy
+Bill Clatter, Lightning Stare, Statue Stance (signature): stands perfectly still for a turn, then releases a double-strength bolt
+Can stand motionless for hours to avoid being noticed. When it finally moves, it does so all at once, with lightning.
+Punchrimp (mantis shrimp)
+Diva
+Haymaker Snap, Twelve-Colour Stare, Knockout Pose (signature): hits hard, then holds a pose that raises its attack
+Throws the fastest punch in the reef and always waits for applause before throwing the second.
+Platypulse (platypus)
+Shy
+Ripple Shock, Burrow Buzz, Bill Sense (signature): reads the target's next move and dodges it
+Feels other creatures' heartbeats through its bill, and gets so flustered by how many there are that it hides in the riverbank.
+Breeze
+Creature
+Temperament
+Attacks
+Flavour
+Lyrewind (lyrebird)
+Diva
+Tail Serenade, Streamer Spin, Repeat Performance (signature): copies the last attack used against it
+Can imitate any sound it hears, and insists on doing so loudly. Its tail plumes trail ribbons of wind like a stage costume.
+Nimbuspard (clouded leopard)
+Shy
+Treetop Drift, Misty Pounce, Cloud Cover (signature): hides in a low cloud, raising its evasion for three turns
+Hides in low clouds and only comes down when the weather is too nice to waste. Purrs so softly it sounds like wind.
+Saigust (saiga antelope)
+Diva
+Stampede Gust, Dust-Devil Strut, Nose Trumpet (signature): a blast through its nose that can make the target flinch
+Considers its enormous nose its best feature and points it at anyone who'll look. Its trumpeting carries across three valleys.
+Chrome
+Creature
+Temperament
+Attacks
+Flavour
+Ironpurr (armoured cat) sprites done
+Shy
+Rivet Scratch, Clank Swipe, Plate Up (signature): retreats inside its plates, sharply raising its defense
+Wears its own armour like a blanket fort and peeks through the gaps when it thinks nobody is watching.
+Quillclerk (secretary bird)
+Diva
+Quill Flourish, Paperwork Stomp, Ink Signature (signature): marks the target so its next hits land for extra damage
+Struts on long legs with steel quills tucked behind its head like pens. Signs its name on every opponent it beats.
+Scalanx (pangolin)
+Shy
+Scale Shrug, Tongue Tickle, Plated Roll (signature): rolls into a steel ball that blocks one attack, then bowls into the target
+Rolls into a perfect ball whenever anyone so much as clears their throat.
+Hush
+Creature
+Temperament
+Attacks
+Flavour
+Potoom (potoo) sprites done
+Shy
+Midnight Wail, Wide-Eye Stare, Branch Disguise (signature): pretends to be a branch, so the next attack passes it by
+Spends the day pretending to be a tree stump. Its night-time wail is the loudest thing about it, which mortifies it too.
+Hexkit (black cat) sprites done
+Diva
+Velvet Swipe, Dramatic Exit, Black Cat Cross (signature): crosses the target's path, lowering its accuracy for three turns
+Makes an entrance even when leaving. Claims every bad thing that happens nearby, purely for the reputation.
+Ayeghast (aye-aye)
+Shy
+Finger Tap, Night Blink, Ghostly Peek (signature): peers in from out of sight, so its next attack can't miss
+Taps on hollow trees to find snacks and on windows to say hello, then flees before anyone answers.
+Glam
+Creature
+Temperament
+Attacks
+Flavour
+Prismmer (hummingbird) sprites done
+Diva
+Prism Flutter, Sugar Rush, Rainbow Runway (signature): scatters light, raising its evasion and dazzling the target
+Hovers wherever the light is best. Has been seen refusing nectar from flowers that clash with its wings.
+Lumikit (kitten) sprites done
+Shy
+Tiny Twinkle, Starlight Nap, Blush Glow (signature): glows when flustered, blinding the target, and grows stronger the lower its health
+Glows whenever it's embarrassed, which makes hiding impossible and embarrasses it even more.
+Pinkadillo (pink fairy armadillo) sprites done
+Diva
+Pink Shell Shine, Sparkle Dig, Roll Call (signature): rolls into a glittering ball the target can't stop looking at, drawing its attacks
+Polishes its pink shell with sand until it sparkles. Only digs back underground to make a dramatic re-entrance.
+Glassprite (glass frog)
+Shy
+Dewdrop Glint, Leaf Leap, See-Through (signature): turns nearly invisible, sharply raising its evasion
+You can see its heart beating through its belly, which it finds deeply embarrassing. Spends most days under a leaf, hoping nobody looks up.
+Blight
+Creature
+Temperament
+Attacks
+Flavour
+Lorislurk (slow loris) sprites done
+Shy
+Slow Squeeze, Big-Eye Freeze, Elbow Venom (signature): a slow strike that poisons the target
+Moves so slowly that nobody notices it, which is exactly the point. Hugging it is not recommended; the venom is in its elbows.
+Hoatoxin (hoatzin)
+Diva
+Stink Crest, Punk Squawk, Swamp Perfume (signature): a cloud of stench that poisons everything nearby, which it insists is a signature scent
+Smells like a compost heap and calls it a fragrance. Restyles its spiky crest every morning.

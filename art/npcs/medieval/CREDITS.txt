@@ -1,0 +1,11 @@
+NN_name.svg  (20 sheets, plus README.txt from the original pack and meta.json)
+  Medieval NPC walk sheets: each 48x64 pixels = 3x4 frames of 16x16, transparent background.
+  Rows: down, up, left, right. Columns: standing, step, other step (same layout as the player).
+  Gowns, robes and capes sway at the hem instead of stepping; held items stay put while walking.
+  Original pixel art made for Procedural Adventures, supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026)
+  as medieval_sprite_sheets.zip. That pack also had a PNG of every sheet and a combined atlas; the
+  PNGs matched these SVGs pixel for pixel when imported, so only the SVGs are kept as the source.
+  05_knight.svg was renamed 05_knight_errant.svg, because art/npcs/ already has a 'knight'.
+
+  In reserve: built into src/gen/people.js by tools/build_people.py and available as PA.SPR.<name>,
+  but not placed in the world yet. Their display names are in meta.json.

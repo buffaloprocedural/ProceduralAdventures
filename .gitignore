@@ -1,0 +1,16 @@
+tests/shots/
+tests/story_shots/
+tools/preview/
+node_modules/
+dist/*.zip
+.DS_Store
+tests/shots_ui/
+tests/shots_hero/
+tests/shots_people/
+tests/shots_mascot/
+__pycache__/
+tests/shots_tiles/
+tests/shots_openings/
+tests/shots_rooms/
+tests/shots_press/
+tests/shots_*/

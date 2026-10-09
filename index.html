@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Procedural Adventures</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="console">
+  <div id="bezel">
+    <div id="bezel-top"><span class="bezel-label">Procedural Adventures</span></div>
+    <div id="screen-wrap"><canvas id="screen" width="160" height="144"></canvas></div>
+    <div id="bezel-brand"><span class="led" id="led" title="sound"></span><span class="status">Procedural <i>Adventures</i></span></div>
+  </div>
+  <div id="pad" aria-hidden="true">
+    <div id="dpad">
+      <button data-btn="up" class="d up"></button>
+      <button data-btn="left" class="d left"></button>
+      <button data-btn="right" class="d right"></button>
+      <button data-btn="down" class="d down"></button>
+      <div class="d mid"></div>
+    </div>
+    <div id="ab">
+      <button data-btn="b" class="round b">B</button>
+      <button data-btn="a" class="round a">A</button>
+    </div>
+    <div id="ss">
+      <button data-btn="select" class="pill">SELECT</button>
+      <button data-btn="start" class="pill">START</button>
+    </div>
+  </div>
+  <div id="help">Arrows/WASD move &middot; Z/Space/Enter = A &middot; X/Backspace = B (hold to hurry) &middot; Enter/Esc = START &middot; Shift = SELECT &middot; M = mute &middot; F = fullscreen<br>Controller: d-pad/stick move &middot; bottom button = A &middot; right button = B &middot; Menu = START &middot; View = SELECT</div>
+</div>
+<script src="src/gen/assets.js"></script>
+<script src="src/gen/font.js"></script>
+<script src="src/gen/hero.js"></script>
+<script src="src/gen/people.js"></script>
+<script src="src/gen/mascot.js"></script>
+<script src="src/gen/world_tiles.js"></script>
+<script src="src/gen/interior_tiles.js"></script>
+<script src="src/gen/data.js"></script>
+<script src="src/gen/creatures.js"></script>
+<script src="src/engine/util.js"></script>
+<script src="src/engine/gfx.js"></script>
+<script src="src/engine/input.js"></script>
+<script src="src/engine/audio.js"></script>
+<script src="src/engine/ui.js"></script>
+<script src="src/game/text.js"></script>
+<script src="src/game/roster.js"></script>
+<script src="src/game/creature.js"></script>
+<script src="src/game/moves.js"></script>
+<script src="src/game/maps.js"></script>
+<script src="src/game/rooms.js"></script>
+<script src="src/game/mascot.js"></script>
+<script src="src/game/dress.js"></script>
+<script src="src/game/worldgen.js"></script>
+<script src="src/game/dungeon.js"></script>
+<script src="src/game/quest.js"></script>
+<script src="src/game/tales/structures.js"></script>
+<script src="src/game/tales/structures2.js"></script>
+<script src="src/game/tales/structures3.js"></script>
+<script src="src/game/tales/structures4.js"></script>
+<script src="src/game/tales/structures5.js"></script>
+<script src="src/game/tales/settings.js"></script>
+<script src="src/game/tales/settings2.js"></script>
+<script src="src/game/tales/settings3.js"></script>
+<script src="src/game/tales/settings4.js"></script>
+<script src="src/game/tales/settings5.js"></script>
+<script src="src/game/tales/settings6.js"></script>
+<script src="src/game/tales/settings7.js"></script>
+<script src="src/game/tales/genres.js"></script>
+<script src="src/game/tales/genres2.js"></script>
+<script src="src/game/tales/genres3.js"></script>
+<script src="src/game/tales/genres4.js"></script>
+<script src="src/game/tales/genres5.js"></script>
+<script src="src/game/tales/genres6.js"></script>
+<script src="src/game/tales/premises.js"></script>
+<script src="src/game/tales/premises2.js"></script>
+<script src="src/game/tales/premises3.js"></script>
+<script src="src/game/tales/premises4.js"></script>
+<script src="src/game/tales/lines.js"></script>
+<script src="src/game/tales.js"></script>
+<script src="src/game/overworld.js"></script>
+<script src="src/game/battle.js"></script>
+<script src="src/game/menus.js"></script>
+<script src="src/game/scenes.js"></script>
+<script src="src/game/credits.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

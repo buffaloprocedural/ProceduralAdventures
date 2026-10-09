@@ -1,0 +1,168 @@
+// Procedural Adventures - the story decks: PREMISES (what's wrong today).
+// A premise is the client's first two lines, out in the open at the very start (the structure's 'ask' is the
+// third); then the player has control. It names the client, the GOAL, and how the story ends.
+//
+//   needs        tags a setting should have (src/game/tales.js rerolls most misfits, and owns up to the rest)
+//   client       who asked: { name, spr } or 'chief' (the setting's person in charge)
+//   goal         noun: the thing (said as "the {GOAL}"); kind: item | creature | person | win | reach
+//                creature: a creature of one of the species in 'species'; person: the setting's royal/vip
+//   tokens       a premise that is ITSELF a collecting job (signatures, errands) names its own tokens
+//   find         what happens when the goal is found at the climax; finale: the last word, back home
+//   battles      true: this story always has creature battles
+'use strict';
+(function (PA) {
+  const T = (PA.TALES = PA.TALES || {});
+  T.premises = {
+    weakest: {
+      name: 'The Weakest Team vs. the Strongest Creature', short: 'a hopeless exhibition match',
+      client: { name: 'COACH BRAMBLE', spr: 'hiker' }, goal: { noun: 'BIG MATCH', kind: 'win' }, battles: true,
+      open: ["{CLIENT}: There you are, {PLAYER}! The {BEAST}, the strongest creature in the world, has challenged all comers!",
+        "{CLIENT}: It's waiting at the end of {DUNGEON}. You and your little team against THAT? ...I love it. Let's make you ready."],
+      journal: 'The {BEAST} is waiting at {DUNGEON}. Get stronger, then go and meet it.',
+      lead: "You're taking on the {BEAST}? THE {BEAST}? Brave of you. Daft, but brave.",
+      find: ["The {BEAST} looks at {PLAYER}, and then, very slowly, it bows.", "It wanted a worthy opponent. It found one."],
+      finale: ["{CLIENT}: You did it, {PLAYER}! From the weakest team in the world to... well, a reasonably strong team! I'm so proud I could burst!"],
+    },
+    beach: {
+      name: 'Beach Contest', short: 'a beach contest', needs: ['sea', 'warm'],
+      client: { name: 'THE CONTEST JUDGE', spr: 'sunny_surfer' }, goal: { noun: 'PERFECT SHELL', kind: 'item' },
+      open: ["{CLIENT}: It's beach contest day, {PLAYER}! The prize goes to the PERFECT SHELL. And you've entered with... nothing?",
+        "{CLIENT}: Legend says the perfect shell lies at the far end of {DUNGEON}. Good luck!"],
+      journal: 'Find the PERFECT SHELL for the beach contest. It is somewhere at the far end of {DUNGEON}.',
+      lead: "The beach contest! Everyone's been shell-hunting since dawn. Nobody's found the perfect one. It isn't on any beach round here.",
+      find: ["There, half-buried in the sand where no sand should be: a spiral shell, pink and gold and absolutely perfect.", "{PLAYER} found the PERFECT SHELL!"],
+      finale: ["{CLIENT}: And the winner of the beach contest is... {PLAYER}! With a perfect shell! The sandcastle category was won by a crab."],
+    },
+    signatures: {
+      name: 'Signatures for the Grad School Assignment', short: 'a grad school assignment', needs: ['academic', 'modern'],
+      client: { name: 'THE REGISTRAR', spr: 'bookworm' }, goal: { noun: 'SIGNED FORM', kind: 'item' },
+      tokens: { one: 'SIGNATURE', many: 'SIGNATURES', n: 5 },
+      open: ["{CLIENT}: {PLAYER}! Your assignment is due tomorrow, and it needs signatures. Lots of them!",
+        "{CLIENT}: The very last one has to come from the Head of Department, who's off in {DUNGEON}."],
+      journal: 'Collect five signatures, then the last from the Head of Department at {DUNGEON}.',
+      lead: "Signatures? Everyone's happy to sign. Nobody's happy to sign RIGHT NOW. That's academia.",
+      find: ["THE HEAD OF DEPARTMENT: A form? Out here? Well. You came all this way. Pen?", "{PLAYER} got the sixth signature! The SIGNED FORM is complete!"],
+      finale: ["{CLIENT}: Six signatures. Every one legible. In twenty years, I have never seen this happen. You pass. You pass SO hard."],
+    },
+    jester: {
+      name: 'The Court Jester Is Sick', short: 'a sick court jester', needs: ['royal', 'silly'],
+      client: 'chief', goal: { noun: 'GIGGLE ROOT', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! The court jester is sick, the feast is tonight, and nobody can remember a single joke!",
+        "{CLIENT}: Only the GIGGLE ROOT cures a jester. It grows in {DUNGEON}. Hurry!"],
+      journal: 'Find the GIGGLE ROOT in {DUNGEON} to cure the jester before the feast.',
+      lead: "The jester's poorly? Oh no. Who'll fall over at the feast? I can't fall over. I've got a bad back.",
+      find: ["A little root, wriggling in the earth. When {PLAYER} picks it up, it snorts with laughter.", "{PLAYER} found the GIGGLE ROOT!"],
+      finale: ["THE JESTER: (one sniff of the root) Ha! HA! Why did the creature cross the road? To get to the FEAST! ...I'm back, everyone! I'm BACK!"],
+    },
+    ore: {
+      name: 'The Computer Genius Needs a Rare Ore', short: 'a computer genius', needs: ['tech', 'modern', 'future'],
+      client: { name: 'GENIUS ADA', spr: 'bookworm' }, goal: { noun: 'GERMANIUM ORE', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! I've built the most powerful computer ever made. It's missing one part.",
+        "{CLIENT}: GERMANIUM! It switches electricity on and off. There's a seam deep in {DUNGEON}."],
+      journal: 'Bring GERMANIUM ORE from {DUNGEON} for ADA\'s computer.',
+      lead: "ADA's computer? It adds up faster than my accountant, I hear. And it doesn't sigh.",
+      find: ["A grey, metallic crystal glints in the rock. It's GERMANIUM: brittle, shiny, and very important.", "{PLAYER} found the GERMANIUM ORE!"],
+      finale: ["{CLIENT}: It's ALIVE! Well, it's ON. It says 'HELLO, {PLAYER}'. I didn't program it to do that. ...I'm going to have a sit-down."],
+    },
+    prizecreature: {
+      name: 'The Prize Creature Vanished on Fair Day', short: 'a prize creature gone missing on fair day',
+      client: { name: 'FARMER GILES', spr: 'farmer' }, goal: { noun: 'PRIZE', kind: 'creature', species: ['MOSSAPO', 'YAMMERS', 'PUFFLUKE', 'LUMIKIT', 'DUSTDASH', 'PINKADILLO', 'PETALPOCA', 'BURROWL'] },
+      open: ["{CLIENT}: It's fair day, {PLAYER}! The bunting's up, the cake's out, and my prize {SP} has vanished!",
+        "{CLIENT}: The judging's at sunset! Somebody saw it heading for {DUNGEON}..."],
+      journal: 'Find the prize {SP} before the judging. It was last seen heading for {DUNGEON}.',
+      lead: "The prize {SP}? It came through here this morning. Wearing its rosette. Very proud of itself.",
+      find: ["There's the prize {SP}, looking very pleased with itself. It just wanted to see the world.", "The prize {SP} decided to come home with {PLAYER}!"],
+      finale: ["{CLIENT}: Best in show! FIVE years running! And {PLAYER} gets a rosette too. A small one. It says 'HELPFUL'."],
+    },
+    ring: {
+      name: 'The Wedding Ring Is Missing', short: 'a missing wedding ring',
+      client: { name: 'YOUR BEST FRIEND', spr: null }, goal: { noun: 'WEDDING RING', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! My wedding's tomorrow. Everything is ready, except the ring. It's GONE.",
+        "{CLIENT}: Someone saw a glint heading for {DUNGEON}. Please, {PLAYER}!"],
+      journal: 'Find the WEDDING RING before the wedding tomorrow. A glint was seen heading for {DUNGEON}.',
+      lead: "A wedding tomorrow! I love a wedding. I cry at all of them. Even the ones I'm not invited to.",
+      find: ["Something glints in the dark. A ring: gold, and plain, and perfect.", "{PLAYER} found the WEDDING RING!"],
+      finale: ["{CLIENT}: The ring! You found it! I'm going to cry. I'm crying. Don't look. ...You're definitely making a speech tomorrow."],
+    },
+    wronghouse: {
+      name: 'Somebody Else\'s Hat', short: 'a mix-up of hats',
+      client: { name: 'THE HAT\'S OWNER', spr: 'woman' }, goal: { noun: 'RIGHT HAT', kind: 'item' },
+      open: ["{CLIENT}: Excuse me, {PLAYER}. That's MY hat you're wearing. ...And I'd guess somebody's wearing yours.",
+        "{CLIENT}: Whoever it is went toward {DUNGEON}. Off you go, and we'll swap back after!"],
+      journal: 'Wearing a stranger\'s hat. Find whoever has the RIGHT HAT. They went toward {DUNGEON}.',
+      lead: "Nice hat. Not yours, though, is it? It doesn't go with your face.",
+      find: ["There, hanging on a rock, is a hat. It's {PLAYER}'s hat! It fits perfectly. It always did.", "{PLAYER} got back the RIGHT HAT!"],
+      finale: ["{CLIENT}: The right hat! It suits you. The other one suited you too, honestly. Hats are very forgiving."],
+    },
+    mayorkey: {
+      name: 'A Holiday, and the Only Key Is Lost', short: 'a lost town key', needs: ['town'],
+      client: 'chief', goal: { noun: 'TOWN KEY', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! I declared a holiday, then lost the TOWN KEY. The only one. It opens everything!",
+        "{CLIENT}: The bakery's locked! The holiday's locked! A crow took it toward {DUNGEON}!"],
+      journal: 'Find the TOWN KEY so the holiday can start. A crow took it toward {DUNGEON}.',
+      lead: "A holiday! And everything's locked. So we're all just standing outside. It's still quite nice, really.",
+      find: ["Tucked in a crow's nest of string and buttons: a big, old, very important key.", "{PLAYER} found the TOWN KEY!"],
+      finale: ["{CLIENT}: The key! Unlock everything! The bakery! The bandstand! Let the holiday BEGIN! ...Can we start it tomorrow? I'm exhausted."],
+    },
+    meteor: {
+      name: 'A Meteor Lands in the Cabbage Patch', short: 'a meteor in the cabbage patch', needs: ['land'],
+      client: { name: 'FARMER WREN', spr: 'farmer' }, goal: { noun: 'STARBORN', kind: 'creature', species: ['LUMIKIT', 'GLASSPRITE', 'HEXKIT', 'PRISMMER', 'VOLTALOTL'] },
+      open: ["{CLIENT}: {PLAYER}! Last night a meteor hit my cabbage patch, and a little starborn {SP} climbed out!",
+        "{CLIENT}: It wandered off before breakfast. Its glowing footprints go toward {DUNGEON}."],
+      journal: 'Follow the glowing footprints and find the starborn {SP}. They lead to {DUNGEON}.',
+      lead: "Did you see the shooting star last night? It went right over. Then there was a bump. Then there were glowing footprints. Bit much for a Tuesday.",
+      find: ["Curled up, glowing softly, is a small {SP} with stars in its fur. It looks at {PLAYER}, and it isn't lost any more.", "The starborn {SP} decided to come home with {PLAYER}!"],
+      finale: ["{CLIENT}: It's welcome to stay in the cabbage patch. The cabbages have never grown so well. They glow a bit now. It's fine."],
+    },
+    lighthouse: {
+      name: 'The Lighthouse Goes Dark on Regatta Night', short: 'a lighthouse gone dark', needs: ['sea'],
+      client: { name: 'THE LIGHTHOUSE KEEPER', spr: 'old_man_b' }, goal: { noun: 'GREAT LENS', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! Tonight's the regatta, the biggest night of the year, and my lighthouse has gone dark!",
+        "{CLIENT}: The GREAT LENS is gone! Without it, the boats are lost. It went toward {DUNGEON}."],
+      journal: 'Find the lighthouse\'s GREAT LENS before the regatta tonight. It went toward {DUNGEON}.',
+      lead: "The lighthouse is out? On regatta night? Somebody fetch a very big candle.",
+      find: ["A great glass lens, ringed like a beehive, catches the last of the light and throws it everywhere.", "{PLAYER} found the GREAT LENS!"],
+      finale: ["{CLIENT}: Look at her shine! Every boat's coming home safe. You did that, {PLAYER}. Every one of those little lights out there."],
+    },
+    advisor: {
+      name: 'The Thesis Advisor Has Gone Missing', short: 'a missing thesis advisor', needs: ['academic'],
+      client: { name: 'THE DEPT. SECRETARY', spr: 'woman' }, goal: { noun: 'THESIS', kind: 'item' },
+      open: ["{CLIENT}: {PLAYER}! Your thesis defence is on Friday, and your advisor's vanished. So has your thesis.",
+        "{CLIENT}: They left a note: 'GONE TO {DUNGEON}. HAVE THESIS.' It's three weeks old."],
+      journal: 'Find my advisor and my THESIS, last seen heading for {DUNGEON}.',
+      lead: "Your advisor? Oh, they wander off all the time. Last time they came back with a beard. It wasn't their beard.",
+      find: ["YOUR ADVISOR: {PLAYER}! I've been reading your thesis! It's brilliant! One comma needs moving. I've moved it.", "{PLAYER} got the THESIS back!"],
+      finale: ["{CLIENT}: Your advisor's back, your thesis is back, and the comma's in the right place. You're going to be a doctor! Of what, again?"],
+    },
+    arcade: {
+      name: 'A Stranger Beat the Arcade High Score', short: 'a mystery arcade high score', needs: ['modern', 'arcade', 'future'],
+      client: { name: 'ARCADE ANDY', spr: 'kid' }, goal: { noun: 'HIGH SCORE', kind: 'win' },
+      open: ["{CLIENT}: {PLAYER}! Someone beat your six-year arcade high score this morning. Their initials: '???'.",
+        "{CLIENT}: Nobody saw them. But they left a note: 'Waiting at {DUNGEON}.'"],
+      journal: 'Find the mystery high scorer at {DUNGEON} and win back the HIGH SCORE.',
+      lead: "The '???' player? They came in, played one game, beat everything, and left without a word. Legendary. Rude, but legendary.",
+      find: ["'???' puts down the controller. 'Good game,' they say. And they mean it.", "{PLAYER} won back the HIGH SCORE!"],
+      finale: ["{CLIENT}: The high score's yours again! It says {PLAYER} at the top! And just underneath, in brackets: (???). They said they'll be back."],
+    },
+    portrait: {
+      name: 'A Royal Portrait, and a Subject Who Runs', short: 'a royal portrait', needs: ['royal', 'genteel'],
+      client: { name: 'THE COURT PAINTER', spr: 'bard' }, goal: { noun: 'ROYAL SITTER', kind: 'person' },
+      open: ["{CLIENT}: {PLAYER}! The royal portrait is due tomorrow, and the subject, {ROYAL}, keeps running away!",
+        "{CLIENT}: This morning they ran all the way to {DUNGEON}! Bring them back. Gently."],
+      journal: 'Bring {ROYAL} back for the portrait. They ran off to {DUNGEON}.',
+      lead: "{ROYAL}? Ran past at full gallop an hour ago. Shouting something about 'being seen'. Lovely calves.",
+      find: ["{ROYAL}: I just can't sit still for it! Everyone LOOKING at me! ...Will you sit next to me? Then they'll look at you a bit too.", "{ROYAL} agreed to sit for the portrait. With {PLAYER}."],
+      finale: ["{CLIENT}: Finished! And look: {ROYAL} is smiling!\fBecause you're in it too, {PLAYER}, in the corner, holding a creature. It's my finest work."],
+    },
+    ferry: {
+      name: 'The Last Ferry, and Six Errands First', short: 'six errands before the last ferry', needs: ['sea', 'sky'],
+      client: 'mother', goal: { noun: 'LAST FERRY', kind: 'reach' }, tokens: { one: 'ERRAND', many: 'ERRANDS', n: 5 },
+      open: ["{CLIENT}: {PLAYER}! The last ferry of the year leaves at sunset, and there are errands to run first!",
+        "{CLIENT}: The ferry itself is past {DUNGEON}. Don't miss it!"],
+      journal: 'Run five errands, then catch the LAST FERRY beyond {DUNGEON} before sunset.',
+      lead: "The last ferry? Leaves at sunset sharp. The captain waits for nobody. She once left without herself.",
+      find: ["THE FERRY CAPTAIN: Just in time! All aboard! ...That's the sixth errand, by the way. Getting on. Well done.", "{PLAYER} made the LAST FERRY!"],
+      finale: ["{CLIENT}: You made it! Every errand, and the ferry too. Now come home soon. And bring me something from the other side."],
+    },
+  };
+})(window.PA);

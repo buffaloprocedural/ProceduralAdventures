@@ -1,0 +1,11 @@
+Bitmap8 - the game's font
+
+An original 8-bit font supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026) in bitmap_font.zip, unchanged: README.txt,
+the light and dark sheets (PNG and SVG), BMFont descriptors (.fnt), per-glyph metrics (bitmap_font.json) and a
+preview. ASCII 32-126 plus ten extras (cursors and arrows, heart, star, note, ellipsis, times, degree), 5x7 glyphs
+in 8x8 cells, proportional advances.
+
+tools/build_font.py builds it into src/gen/font.js from the light sheet and the metrics. On top of the font as
+supplied it makes the digits tabular (all 6px; the 1 is centred), adds a figure space for padding numbers, and
+makes four glyphs the game needs from the font's own: e-acute (from e), a pound sign, a hollow
+cursor (from the solid one) and a bullet.

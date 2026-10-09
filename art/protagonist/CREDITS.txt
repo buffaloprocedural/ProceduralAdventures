@@ -1,0 +1,13 @@
+hero_masc_1..6.svg, hero_femme_1..6.svg
+  The protagonist's twelve looks: walk sheets of 48x64 pixels = 3x4 frames of 16x16.
+  Rows: down, up, left, right. Columns: standing, step, other step.
+  Original pixel art made for Procedural Adventures, supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026) in
+  hero_variants.zip, unchanged; VARIANTS_README.txt (their README) describes each look. hero_masc_1 is the
+  original hero.svg, which it replaces. The .png/.gif files here are the Society's previews.
+
+  After choosing BOY or GIRL the player is given one of that kind's six looks at random, never the same look as
+  the previous new game in that browser (PA.pickLook in src/main.js). Converted to src/gen/hero.js by
+  tools/build_hero.py.
+
+  The original hero.svg carried an embedded C2PA provenance manifest recording that it was produced with
+  Claude (Anthropic) at the Society's request.

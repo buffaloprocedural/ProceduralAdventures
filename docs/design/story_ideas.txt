@@ -1,0 +1,27 @@
+Story Structures
+-A mysterious hero comes to town.
+-The hero (protagonist) must leave town on important business.
+-Dungeon crawl: something important awaits below the town!
+
+Settings
+-Regency
+-Medieval
+-Waterfront Town
+-1990s Grad School
+-1970s Silicon Valley startup
+-Whoops, all forest!
+-The king's dungeon
+
+Genres
+-Romance
+-Drama
+-Slice of life
+-Educational information about solar system
+-Video game history
+
+Cold Opens/Premises
+-The protagonist is about to fight the world's strongest creature with the weakest possible team. They inevitably lose, setting the plot in motion.
+-Beach contest
+-You need to collect all the signatures for your grad school assignment
+-The court jester is sick
+-The computer genius needs a rare ore from the mines

@@ -1,0 +1,10 @@
+NN_name.svg  (20 sheets, plus README.txt from the original pack)
+  Regency NPC walk sheets: each 48x64 pixels = 3x4 frames of 16x16, transparent background.
+  Rows: down, up, left, right. Columns: standing, step, other step (same layout as the player).
+  Characters in long gowns, robes or capes walk with a hem sway instead of leg steps.
+  Original pixel art made for Procedural Adventures, supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026)
+  as regency_sprite_sheets.zip. That pack also had a PNG of every sheet and a combined atlas; the
+  PNGs matched these SVGs pixel for pixel when imported, so only the SVGs are kept as the source.
+
+  Converted (with ../*.svg) to src/gen/people.js by tools/build_people.py; the files are unchanged.
+  Which game role uses which sheet: the PA.SPR string mapping in src/game/maps.js.

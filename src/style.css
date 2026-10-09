@@ -1,0 +1,97 @@
+/* the page: the game sits in a bevelled grey frame on a teal ground; the touch pad is grey push buttons */
+:root {
+  --desk: #1d6a6e;
+  --face: #c5c3cb;
+  --hi: #ffffff;
+  --light: #e4e2ea;
+  --shadow: #82808e;
+  --dark: #1a1824;
+  --sel: #20288a;
+  --sel2: #4c86cc;
+  --ink: #12131a;
+  --ui-font: Tahoma, Verdana, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; background: var(--desk); color: var(--ink); overflow: hidden;
+  font-family: var(--ui-font); }
+body {
+  background: var(--desk);
+  display: flex; align-items: center; justify-content: center;
+  touch-action: none; user-select: none; -webkit-user-select: none;
+}
+/* raised and sunken edges, the two-tone way */
+.raised, #bezel, #dpad .d, .round, .pill {
+  background: var(--face);
+  border: 1px solid; border-color: var(--light) var(--dark) var(--dark) var(--light);
+  box-shadow: inset 1px 1px 0 var(--hi), inset -1px -1px 0 var(--shadow);
+}
+#console { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+#bezel { padding: 3px; box-shadow: inset 1px 1px 0 var(--hi), inset -1px -1px 0 var(--shadow), 6px 6px 0 rgba(0,0,0,.35); }
+#bezel-top { display: flex; align-items: center; gap: 6px; height: 18px; margin-bottom: 3px; padding: 0 2px 0 5px;
+  background: linear-gradient(90deg, var(--sel), var(--sel2)); color: #fff; font: bold 11px/1 var(--ui-font); }
+.bezel-label { flex: 1; text-align: center; white-space: nowrap; overflow: hidden; }
+#screen-wrap { background: #000; line-height: 0; border: 1px solid; border-color: var(--shadow) var(--hi) var(--hi) var(--shadow);
+  box-shadow: inset 1px 1px 0 var(--dark); padding: 1px 0 0 1px; }
+#screen {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  display: block;
+}
+/* the strip under the screen */
+#bezel-brand { display: flex; align-items: center; gap: 3px; margin-top: 3px; font: 11px/1 var(--ui-font); color: var(--ink); }
+#bezel-brand .status { flex: 1; padding: 3px 5px; border: 1px solid; border-color: var(--shadow) var(--hi) var(--hi) var(--shadow); }
+#bezel-brand .status i { font-style: normal; font-weight: bold; color: var(--sel); }
+.led { flex: 0 0 auto; width: 15px; height: 15px; border: 1px solid; border-color: var(--shadow) var(--hi) var(--hi) var(--shadow);
+  background: radial-gradient(circle, #3a1414 0 3px, transparent 4px); }
+.led.on { background: radial-gradient(circle, #46e05a 0 3px, rgba(70,224,90,.35) 4px, transparent 6px); }
+#help { font: 11px/1.4 var(--ui-font); color: #e6f2f0; text-align: center; max-width: 760px; padding: 0 16px; }
+
+/* touch pad: grey push buttons that sink when pressed; every size is a multiple of --u, so the pad can grow */
+#pad { --u: 44px; display: none; width: 100%; max-width: 420px; height: 190px; position: relative; }
+#dpad { position: absolute; left: 16px; top: 18px; width: calc(var(--u) * 3); height: calc(var(--u) * 3); }
+#dpad .d { position: absolute; width: var(--u); height: var(--u); padding: 0; }
+#dpad .d:not(.mid)::after { content: ''; position: absolute; left: 50%; top: 50%; width: 0; height: 0;
+  border: calc(var(--u) * .16) solid transparent; transform: translate(-50%, -50%); }
+#dpad .d.up::after { border-bottom-color: var(--ink); margin-top: -3px; }
+#dpad .d.down::after { border-top-color: var(--ink); margin-top: 3px; }
+#dpad .d.left::after { border-right-color: var(--ink); margin-left: -3px; }
+#dpad .d.right::after { border-left-color: var(--ink); margin-left: 3px; }
+#dpad .up { left: var(--u); top: 0; }
+#dpad .down { left: var(--u); top: calc(var(--u) * 2); }
+#dpad .left { left: 0; top: var(--u); }
+#dpad .right { left: calc(var(--u) * 2); top: var(--u); }
+#dpad .mid { left: var(--u); top: var(--u); }
+#ab { position: absolute; right: 14px; top: 26px; width: calc(var(--u) * 3.4); height: calc(var(--u) * 2.3); }
+.round { position: absolute; width: calc(var(--u) * 1.41); height: calc(var(--u) * 1.05); padding: 0; color: var(--ink);
+  font: bold calc(var(--u) * .41) var(--ui-font); }
+.round.a { right: 0; top: 0; outline: 1px solid var(--dark); }
+.round.b { left: 0; top: calc(var(--u) * .77); }
+#ss { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); display: flex; gap: 14px; }
+.pill { width: 72px; height: 22px; padding: 0; color: var(--ink); font: 10px var(--ui-font); letter-spacing: .5px; }
+#dpad .d.pressed, .round.pressed, .pill.pressed {
+  border-color: var(--dark) var(--light) var(--light) var(--dark);
+  box-shadow: inset 1px 1px 0 var(--shadow), inset -1px -1px 0 var(--hi); padding-top: 2px; padding-left: 2px; }
+
+body.touch #pad { display: block; }
+body.touch #help { display: none; }
+body.touch #console { gap: 4px; }
+body.touch #bezel { padding: 2px; }
+body.touch #bezel-top { display: none; }
+body.full #bezel { padding: 0; box-shadow: none; background: transparent; border: 0; }
+body.full #screen-wrap { border: 0; box-shadow: none; padding: 0; }
+body.full #bezel-top, body.full #bezel-brand, body.full #help { display: none; }
+
+/* a phone held upright: the screen runs edge to edge at the very top (below the notch), the pad fills the rest */
+body.portrait { display: block; background: #000; }
+body.portrait #console { height: 100%; gap: 0; align-items: stretch; }
+body.portrait #bezel { padding: env(safe-area-inset-top) 0 0; border: 0; box-shadow: none; background: #000; }
+body.portrait #screen-wrap { border: 0; box-shadow: none; padding: 0; display: flex; justify-content: center; }
+body.portrait #bezel-brand { display: none; }
+body.portrait #pad { --u: clamp(40px, 13vw, 72px); flex: 1; max-width: none; height: auto; min-height: 200px;
+  border-top: 1px solid var(--light); box-shadow: inset 0 1px 0 var(--hi); background: var(--face); }
+body.portrait #dpad { left: max(5vw, env(safe-area-inset-left)); top: calc(40% - var(--u) * 1.5 - env(safe-area-inset-bottom) / 2); }
+body.portrait #ab { right: max(5vw, env(safe-area-inset-right)); top: calc(40% - var(--u) * 1.15 - env(safe-area-inset-bottom) / 2); }
+body.portrait #ss { bottom: calc(env(safe-area-inset-bottom) + 14px); gap: 24px; }
+body.portrait #ab { width: calc(var(--u) * 3.1); }
+body.portrait .pill { width: 84px; height: 28px; font-size: 11px; }

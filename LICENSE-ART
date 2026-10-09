@@ -1,0 +1,40 @@
+Procedural Adventures - art, story text and design documents
+
+Copyright (c) 2026 The Buffalo, New York Procedural Amusements Coding Society
+
+Licensed under the Creative Commons Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0):
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+You may share and adapt this material for non-commercial purposes, as long as you give appropriate credit, provide
+a link to the licence and indicate if changes were made.
+
+This covers the game's graphics, its story and writing, and its design documents:
+
+  Graphics
+    art/                          all pixel art: characters, creatures, the mascot, tiles, objects, battle
+                                  effects, the Bitmap8 font, and their previews
+    src/gen/  (except data.js)    the built forms of that art (generated from art/ by tools/)
+    tools/creature_designs/       the creature designs, drawn as vector shapes in Python
+    tools/fx_designs.py           the battle-effect designs, drawn the same way
+    tools/build_parcel.py         the parcel design, drawn the same way
+
+  Story and writing
+    src/game/tales/               the story decks: structures, settings, genres, premises and lines
+    src/game/text.js              the game's words: dialogue, signs, books, television and chatter
+    src/game/roster.js            the creature roster: names, types, temperaments and descriptions
+
+  Design documents
+    docs/design/                  the creature roster and story design notes
+
+  dist/procedural-adventures.html bundles all of the above together with the code. The parts of it that come from
+  the files listed here are under this licence; the rest is code, under LICENSE.
+
+Not covered:
+  Everything else in the repository is code, dedicated to the public domain under CC0 1.0 (LICENSE). That
+  includes the rigs and build scripts that draw and convert the art (tools/creature_rig.py, tools/fx_rig.py,
+  tools/build_*.py and the rest of tools/), and the music composer (src/engine/audio.js), so the music the game
+  composes is not covered by this licence either.
+  The text of Jane Austen's Pride and Prejudice (1813), from which place names, characters and quotations are
+  taken (src/gen/data.js, built by tools/build_data.py), is in the public domain.
+
+The Bitmap8 font (art/font/) is by The Buffalo, New York Procedural Amusements Coding Society; see art/font/CREDITS.txt.

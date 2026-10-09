@@ -1,0 +1,16 @@
+Original creature battle sets - in the game
+
+Eleven creatures supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026) in creature_battle_sets.zip, unchanged:
+  glumph (Water), hexkit (Shadow), hoarfowl (Ice), ironpurr (Metal), lorislurk (Toxic), lumikit (Light),
+  pinkadillo (Light), potoom (Shadow), prismmer (Light), riptabby (Water), servolt (Storm)
+Each SVG is 80x32: front view 32x32 at (0,0), back view 32x32 at (32,0), and two 16x16 party-menu icon
+frames at (64,0) and (64,16) - the same layout as art/mascot/gulliver_battle.svg (GULLET, from the same
+pack, is in the game as GULLIVER's species). tools/sprite_sheet.py reads them as they are.
+
+They are part of the game's creature roster (src/game/roster.js, from docs/design/); the elemental names above are
+the pack's, and the game's types are HOARFOWL FROST, RIPTABBY and GLUMPH
+TIDE, SERVOLT CURRENT, IRONPURR CHROME, POTOOM and HEXKIT HUSH, PRISMMER, LUMIKIT and PINKADILLO GLAM, LORISLURK
+BLIGHT. tools/build_creatures.py builds them into src/gen/creatures.js. SERVOLT and GLUMPH were later recoloured (steel blue,
+sea green) by tools/recolour_creatures.py. The roster's other creatures were drawn with vectors
+(tools/creature_rig.py; options in options/ and ideas/, chosen by the Society). A new creature gets a plain
+placeholder shape until a finished set is saved here as <name>.svg (or .png), lower-case, same 80x32 layout.

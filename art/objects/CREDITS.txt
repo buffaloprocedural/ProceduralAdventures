@@ -1,0 +1,7 @@
+objects_and_emotes.png
+  48x32, cells of 16x16. Top row: the tied parcel (items lying in the field), the paper letter (the quest item
+  in the villain's lair), the shadow under a jumping player. Bottom row: the emote bubbles - smile, '!', '?'.
+  Original pixel art drawn by The Buffalo, New York Procedural Amusements Coding Society (October 2026); the parcel was drawn with vectors by
+  tools/build_parcel.py (five options in parcel_options.png).
+  tools/build_objects.py ranks its four colours into the four shades the game tints and writes them into
+  src/gen/assets.js.

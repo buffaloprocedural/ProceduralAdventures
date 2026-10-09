@@ -1,0 +1,1927 @@
+{
+ "tile_size": 16,
+ "columns": 16,
+ "rows": 17,
+ "animation": {
+  "water": [
+   "water_1",
+   "water_2",
+   "water_3"
+  ],
+  "waterfall": [
+   "waterfall_1",
+   "waterfall_2"
+  ],
+  "whirlpool": [
+   "whirlpool_1",
+   "whirlpool_2"
+  ],
+  "flowers_red": [
+   "flowers_red_1",
+   "flowers_red_2"
+  ],
+  "flowers_white": [
+   "flowers_white_1",
+   "flowers_white_2"
+  ],
+  "tall_grass_step": [
+   "tall_grass",
+   "tall_grass_rustle"
+  ]
+ },
+ "items": [
+  {
+   "name": "grass",
+   "section": "Ground & grass",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "grass_alt",
+   "section": "Ground & grass",
+   "x": 1,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    16,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "tall_grass",
+   "section": "Ground & grass",
+   "x": 2,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "tall_grass_rustle",
+   "section": "Ground & grass",
+   "x": 3,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "flowers_red_1",
+   "section": "Ground & grass",
+   "x": 4,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "flowers_red_2",
+   "section": "Ground & grass",
+   "x": 5,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "flowers_white_1",
+   "section": "Ground & grass",
+   "x": 6,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "flowers_white_2",
+   "section": "Ground & grass",
+   "x": 7,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    112,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "path",
+   "section": "Ground & grass",
+   "x": 8,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    128,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sand",
+   "section": "Ground & grass",
+   "x": 9,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "snow",
+   "section": "Ground & grass",
+   "x": 10,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_slippery",
+   "section": "Ground & grass",
+   "x": 11,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "town_paving",
+   "section": "Ground & grass",
+   "x": 12,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "brick_road",
+   "section": "Ground & grass",
+   "x": 13,
+   "y": 0,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "path_edges_3x3+inner",
+   "section": "Terrain edges",
+   "x": 0,
+   "y": 1,
+   "w": 5,
+   "h": 3,
+   "px": [
+    0,
+    16,
+    80,
+    48
+   ],
+   "layout": [
+    [
+     "nw",
+     "n",
+     "ne",
+     "inner_nw",
+     "inner_ne"
+    ],
+    [
+     "w",
+     "center",
+     "e",
+     "inner_sw",
+     "inner_se"
+    ],
+    [
+     "sw",
+     "s",
+     "se",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "sand_edges_3x3+inner",
+   "section": "Terrain edges",
+   "x": 5,
+   "y": 1,
+   "w": 5,
+   "h": 3,
+   "px": [
+    80,
+    16,
+    80,
+    48
+   ],
+   "layout": [
+    [
+     "nw",
+     "n",
+     "ne",
+     "inner_nw",
+     "inner_ne"
+    ],
+    [
+     "w",
+     "center",
+     "e",
+     "inner_sw",
+     "inner_se"
+    ],
+    [
+     "sw",
+     "s",
+     "se",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "water_edges_3x3+inner",
+   "section": "Terrain edges",
+   "x": 10,
+   "y": 1,
+   "w": 5,
+   "h": 3,
+   "px": [
+    160,
+    16,
+    80,
+    48
+   ],
+   "layout": [
+    [
+     "nw",
+     "n",
+     "ne",
+     "inner_nw",
+     "inner_ne"
+    ],
+    [
+     "w",
+     "center",
+     "e",
+     "inner_sw",
+     "inner_se"
+    ],
+    [
+     "sw",
+     "s",
+     "se",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "shore_edges_3x3+inner",
+   "section": "Terrain edges",
+   "x": 0,
+   "y": 4,
+   "w": 5,
+   "h": 3,
+   "px": [
+    0,
+    64,
+    80,
+    48
+   ],
+   "layout": [
+    [
+     "nw",
+     "n",
+     "ne",
+     "inner_nw",
+     "inner_ne"
+    ],
+    [
+     "w",
+     "center",
+     "e",
+     "inner_sw",
+     "inner_se"
+    ],
+    [
+     "sw",
+     "s",
+     "se",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "ice_edges_3x3+inner",
+   "section": "Terrain edges",
+   "x": 5,
+   "y": 4,
+   "w": 5,
+   "h": 3,
+   "px": [
+    80,
+    64,
+    80,
+    48
+   ],
+   "layout": [
+    [
+     "nw",
+     "n",
+     "ne",
+     "inner_nw",
+     "inner_ne"
+    ],
+    [
+     "w",
+     "center",
+     "e",
+     "inner_sw",
+     "inner_se"
+    ],
+    [
+     "sw",
+     "s",
+     "se",
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "water_1",
+   "section": "Water",
+   "x": 10,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "water_2",
+   "section": "Water",
+   "x": 11,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "water_3",
+   "section": "Water",
+   "x": 12,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "waterfall_1",
+   "section": "Water",
+   "x": 13,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "waterfall_2",
+   "section": "Water",
+   "x": 14,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "whirlpool_1",
+   "section": "Water",
+   "x": 15,
+   "y": 4,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "whirlpool_2",
+   "section": "Water",
+   "x": 10,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "rock_in_water",
+   "section": "Water",
+   "x": 11,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "lily_pad",
+   "section": "Water",
+   "x": 12,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "stepping_stones",
+   "section": "Water",
+   "x": 13,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ledge_s_l",
+   "section": "Ledges & cliffs",
+   "x": 14,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ledge_s",
+   "section": "Ledges & cliffs",
+   "x": 15,
+   "y": 5,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ledge_s_r",
+   "section": "Ledges & cliffs",
+   "x": 10,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ledge_w",
+   "section": "Ledges & cliffs",
+   "x": 11,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ledge_e",
+   "section": "Ledges & cliffs",
+   "x": 12,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_top",
+   "section": "Ledges & cliffs",
+   "x": 13,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_lip",
+   "section": "Ledges & cliffs",
+   "x": 14,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_face",
+   "section": "Ledges & cliffs",
+   "x": 15,
+   "y": 6,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_face_l",
+   "section": "Ledges & cliffs",
+   "x": 0,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    0,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_face_r",
+   "section": "Ledges & cliffs",
+   "x": 1,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    16,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_base",
+   "section": "Ledges & cliffs",
+   "x": 2,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_top_l",
+   "section": "Ledges & cliffs",
+   "x": 3,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_top_r",
+   "section": "Ledges & cliffs",
+   "x": 4,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cliff_cave_entrance",
+   "section": "Ledges & cliffs",
+   "x": 5,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "stone_stairs",
+   "section": "Ledges & cliffs",
+   "x": 6,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "tree_round_2x2",
+   "section": "Trees & plants",
+   "x": 7,
+   "y": 7,
+   "w": 2,
+   "h": 2,
+   "px": [
+    112,
+    112,
+    32,
+    32
+   ]
+  },
+  {
+   "name": "tree_berry_2x2",
+   "section": "Trees & plants",
+   "x": 9,
+   "y": 7,
+   "w": 2,
+   "h": 2,
+   "px": [
+    144,
+    112,
+    32,
+    32
+   ]
+  },
+  {
+   "name": "tree_pine_2x2",
+   "section": "Trees & plants",
+   "x": 11,
+   "y": 7,
+   "w": 2,
+   "h": 2,
+   "px": [
+    176,
+    112,
+    32,
+    32
+   ]
+  },
+  {
+   "name": "tree_palm_2x2",
+   "section": "Trees & plants",
+   "x": 13,
+   "y": 7,
+   "w": 2,
+   "h": 2,
+   "px": [
+    208,
+    112,
+    32,
+    32
+   ]
+  },
+  {
+   "name": "tree_snowy_pine_2x2",
+   "section": "Trees & plants",
+   "x": 0,
+   "y": 8,
+   "w": 2,
+   "h": 2,
+   "px": [
+    0,
+    128,
+    32,
+    32
+   ]
+  },
+  {
+   "name": "bush_cuttable",
+   "section": "Trees & plants",
+   "x": 15,
+   "y": 7,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    112,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "forest_wall",
+   "section": "Trees & plants",
+   "x": 2,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "stump",
+   "section": "Trees & plants",
+   "x": 3,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "hedge",
+   "section": "Trees & plants",
+   "x": 4,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "flower_planter",
+   "section": "Trees & plants",
+   "x": 5,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "boulder_strength",
+   "section": "Rocks",
+   "x": 6,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "rock_smashable",
+   "section": "Rocks",
+   "x": 15,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "pebbles",
+   "section": "Rocks",
+   "x": 2,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "fence_wood_h",
+   "section": "Fences & walls",
+   "x": 3,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "fence_wood_v",
+   "section": "Fences & walls",
+   "x": 4,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "fence_wood_post",
+   "section": "Fences & walls",
+   "x": 5,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "fence_picket",
+   "section": "Fences & walls",
+   "x": 6,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "stone_wall",
+   "section": "Fences & walls",
+   "x": 7,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    112,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sign_wood",
+   "section": "Props",
+   "x": 8,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    128,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "signpost_arrow",
+   "section": "Props",
+   "x": 9,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "mailbox",
+   "section": "Props",
+   "x": 10,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "lamp_post_1x2",
+   "section": "Props",
+   "x": 11,
+   "y": 9,
+   "w": 1,
+   "h": 2,
+   "px": [
+    176,
+    144,
+    16,
+    32
+   ]
+  },
+  {
+   "name": "notice_board_2x1",
+   "section": "Props",
+   "x": 12,
+   "y": 9,
+   "w": 2,
+   "h": 1,
+   "px": [
+    192,
+    144,
+    32,
+    16
+   ]
+  },
+  {
+   "name": "well",
+   "section": "Props",
+   "x": 14,
+   "y": 9,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    144,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "statue_1x2",
+   "section": "Props",
+   "x": 15,
+   "y": 9,
+   "w": 1,
+   "h": 2,
+   "px": [
+    240,
+    144,
+    16,
+    32
+   ]
+  },
+  {
+   "name": "stone_lantern_1x2",
+   "section": "Props",
+   "x": 0,
+   "y": 10,
+   "w": 1,
+   "h": 2,
+   "px": [
+    0,
+    160,
+    16,
+    32
+   ]
+  },
+  {
+   "name": "crate",
+   "section": "Props",
+   "x": 1,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    16,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "barrel",
+   "section": "Props",
+   "x": 2,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "pot",
+   "section": "Props",
+   "x": 3,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "snowman",
+   "section": "Props",
+   "x": 4,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "roof_red_4x2",
+   "section": "Roofs",
+   "x": 5,
+   "y": 10,
+   "w": 4,
+   "h": 2,
+   "px": [
+    80,
+    160,
+    64,
+    32
+   ]
+  },
+  {
+   "name": "roof_red_chimney",
+   "section": "Roofs",
+   "x": 9,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "roof_blue_4x2",
+   "section": "Roofs",
+   "x": 1,
+   "y": 11,
+   "w": 4,
+   "h": 2,
+   "px": [
+    16,
+    176,
+    64,
+    32
+   ]
+  },
+  {
+   "name": "roof_blue_chimney",
+   "section": "Roofs",
+   "x": 10,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "roof_teal_4x2",
+   "section": "Roofs",
+   "x": 9,
+   "y": 11,
+   "w": 4,
+   "h": 2,
+   "px": [
+    144,
+    176,
+    64,
+    32
+   ]
+  },
+  {
+   "name": "roof_teal_chimney",
+   "section": "Roofs",
+   "x": 12,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "roof_purple_4x2",
+   "section": "Roofs",
+   "x": 5,
+   "y": 12,
+   "w": 4,
+   "h": 2,
+   "px": [
+    80,
+    192,
+    64,
+    32
+   ]
+  },
+  {
+   "name": "roof_purple_chimney",
+   "section": "Roofs",
+   "x": 13,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "roof_brown_4x2",
+   "section": "Roofs",
+   "x": 0,
+   "y": 13,
+   "w": 4,
+   "h": 2,
+   "px": [
+    0,
+    208,
+    64,
+    32
+   ]
+  },
+  {
+   "name": "roof_brown_chimney",
+   "section": "Roofs",
+   "x": 14,
+   "y": 10,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    160,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_l",
+   "section": "Walls & doors",
+   "x": 4,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_m",
+   "section": "Walls & doors",
+   "x": 9,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_r",
+   "section": "Walls & doors",
+   "x": 10,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_window",
+   "section": "Walls & doors",
+   "x": 11,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_door",
+   "section": "Walls & doors",
+   "x": 12,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "wall_doorway_open",
+   "section": "Walls & doors",
+   "x": 13,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "glass_doors",
+   "section": "Facilities",
+   "x": 14,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sign_clinic",
+   "section": "Facilities",
+   "x": 15,
+   "y": 13,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    208,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sign_shop",
+   "section": "Facilities",
+   "x": 4,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sign_arena",
+   "section": "Facilities",
+   "x": 5,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "sign_lab",
+   "section": "Facilities",
+   "x": 6,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "awning_l",
+   "section": "Facilities",
+   "x": 7,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    112,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "awning_m",
+   "section": "Facilities",
+   "x": 8,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    128,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "awning_r",
+   "section": "Facilities",
+   "x": 9,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "bridge_h",
+   "section": "Bridges & docks",
+   "x": 10,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "bridge_v",
+   "section": "Bridges & docks",
+   "x": 11,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "dock",
+   "section": "Bridges & docks",
+   "x": 12,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "dock_edge_s",
+   "section": "Bridges & docks",
+   "x": 13,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "dock_post",
+   "section": "Bridges & docks",
+   "x": 14,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_floor",
+   "section": "Cave",
+   "x": 15,
+   "y": 14,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    224,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_floor_alt",
+   "section": "Cave",
+   "x": 0,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    0,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_wall",
+   "section": "Cave",
+   "x": 1,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    16,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_wall_base",
+   "section": "Cave",
+   "x": 2,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_wall_top",
+   "section": "Cave",
+   "x": 3,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_hole",
+   "section": "Cave",
+   "x": 4,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_ladder",
+   "section": "Cave",
+   "x": 5,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_boulder",
+   "section": "Cave",
+   "x": 6,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_stairs",
+   "section": "Cave",
+   "x": 7,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    112,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "cave_exit",
+   "section": "Cave",
+   "x": 8,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    128,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_crystal_rock",
+   "section": "Ice cavern",
+   "x": 9,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    144,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_crystal_wall",
+   "section": "Ice cavern",
+   "x": 10,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    160,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_wall_face",
+   "section": "Ice cavern",
+   "x": 11,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    176,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_wall_base",
+   "section": "Ice cavern",
+   "x": 12,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    192,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "icicles",
+   "section": "Ice cavern",
+   "x": 13,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    208,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_boulder",
+   "section": "Ice cavern",
+   "x": 14,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    224,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_hole",
+   "section": "Ice cavern",
+   "x": 15,
+   "y": 15,
+   "w": 1,
+   "h": 1,
+   "px": [
+    240,
+    240,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_ladder",
+   "section": "Ice cavern",
+   "x": 0,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    0,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_stairs",
+   "section": "Ice cavern",
+   "x": 1,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    16,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "thin_ice",
+   "section": "Ice cavern",
+   "x": 2,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    32,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "snowdrift",
+   "section": "Ice cavern",
+   "x": 3,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    48,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "snowy_rock",
+   "section": "Ice cavern",
+   "x": 4,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    64,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_crystal_rock_on_ice",
+   "section": "Ice cavern",
+   "x": 5,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    80,
+    256,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "ice_boulder_on_ice",
+   "section": "Ice cavern",
+   "x": 6,
+   "y": 16,
+   "w": 1,
+   "h": 1,
+   "px": [
+    96,
+    256,
+    16,
+    16
+   ]
+  }
+ ]
+}

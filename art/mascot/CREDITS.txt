@@ -1,0 +1,15 @@
+GULLIVER, the cool seagull - the game's mascot (species: GULLET, a FROST-type Diva in the creature roster)
+
+gulliver_overworld.svg
+  Walk sheet: 48x64 = 3x4 frames of 16x16. Rows down, up, left, right; columns stand, step, other step.
+  Supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026) as gullet_ice_overworld.svg; unchanged. Its embedded C2PA
+  manifest (left intact) records that it was produced with Claude (Anthropic) at the Society's request.
+
+gulliver_battle.svg
+  His complete battle set, 80x32: front view 32x32 at (0,0), back view 32x32 at (32,0), and two 16x16
+  party-menu icon frames at (64,0) and (64,16). Supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026) as gullet.svg
+  in creature_battle_sets.zip; unchanged. It replaces the earlier gulliver_battle_8x.png (a front view
+  only, which the game mirrored for his back).
+
+Both are original pixel art made for Procedural Adventures. tools/build_mascot.py turns them into
+src/gen/mascot.js.

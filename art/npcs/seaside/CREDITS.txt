@@ -1,0 +1,11 @@
+NN_name.svg  (4 sheets: two surfers and two goths)
+  NPC walk sheets: each 48x64 pixels = 3x4 frames of 16x16, transparent background.
+  Rows: down, up, left, right. Columns: standing, step, other step (same layout as the player).
+  Original pixel art made for Procedural Adventures, supplied by The Buffalo, New York Procedural Amusements Coding Society (October 2026)
+  as goth_surfer_sheets.zip (kai_surfer, sunny_surfer, scarlet_goth, violet_goth). The pack also had a
+  PNG of every sheet; they matched these SVGs pixel for pixel when imported, so only the SVGs are kept.
+  Renamed with a number prefix only; the files are unchanged.
+
+  Built into src/gen/people.js by tools/build_people.py (display names in meta.json). In the world, the
+  surfers walk the routes and the goths turn up in towns and townsfolk's houses (src/game/quest.js),
+  each with lines of their own (L.SURFER, L.GOTH in src/game/text.js).

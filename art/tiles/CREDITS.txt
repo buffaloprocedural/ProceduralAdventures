@@ -1,0 +1,17 @@
+Overworld tileset - original pixel art made for Procedural Adventures, supplied by The Buffalo, New York Procedural Amusements Coding Society
+(October 2026) as files.zip:
+
+  overworld_tileset.svg     the tileset (256x272 = 16x17 tiles of 16x16). Source of record. Its embedded C2PA
+                            manifest (left intact) records that it was produced with Claude (Anthropic).
+  tileset_manifest.json     the name, position and size of every tile and multi-tile piece, plus animations
+  tileset_preview_3x.png    the same tileset at 3x - tools/build_world_tiles.py reads its pixels (it matches the
+                            SVG pixel for pixel; only the 31 empty grid slots differ: grey here, transparent there)
+  tileset_demo_scenes.png   reference scenes showing how the pieces go together
+
+All four files are unchanged. tools/build_world_tiles.py turns them into src/gen/world_tiles.js; the game's
+"dressing" pass (src/game/dress.js) decides which tile each overworld cell shows.
+
+overworld_tileset.png (October 2026)
+  The 1x sheet, retouched by hand by the Society (roofs, statue, lantern, signs, mailbox, grass), is now the
+  source of record: tools/build_world_tiles.py reads it, and --preview rewrites tileset_preview_3x.png from it.
+  overworld_tileset.svg is the original, before those touch-ups.
